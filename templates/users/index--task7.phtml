@@ -1,0 +1,18 @@
+<h1>Пользователи</h1>
+<form action="/users" method="get">
+  <input type="search" name="term" value="<?= htmlspecialchars($term) ?>" />
+  <input type="submit" value="Search" />
+</form>
+
+<table sytle="border: 1px solid grey">
+    <tr>
+        <td>id</td>
+        <td>firstName</td>
+    <tr>
+    <?php foreach($users as $user): ?>
+    <tr>
+        <td><?= $user['id']?></td>
+        <td><a href="/users/<?= $user['id']?>"><?= $user['firstName']?></a></td>
+    <tr>
+    <?php endforeach; ?>
+</table>

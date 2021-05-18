@@ -1,0 +1,26 @@
+<h1>Форма входа пользователя</h1>
+
+<form action="/users/signin" method="POST">
+  <div>
+    <label>
+        Email
+      <input type="email" required name="user[email]" value="<?= htmlspecialchars($user['email']) ?>">
+    </label>
+    <?php if (isset($errors['email'])): ?>
+      <div><?= $errors['email'] ?></div>
+    <?php endif ?>
+  </div>
+  <div>
+    <label>
+        Пароль
+      <input type="password" required name="user[password]" value="<?= htmlspecialchars($user['password']) ?>">
+    </label>
+    <?php if (isset($errors['password'])): ?>
+      <div><?= $errors['password'] ?></div>
+    <?php endif ?>
+  </div>
+    <div>
+      <?= $errors['signin'] ?? '' ?>
+    </div>
+  <input type="submit" value="Sign In">
+</form>

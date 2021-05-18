@@ -1,0 +1,9 @@
+{"nickname":"antony","email":"antony@mail.ru","id":3357}
+{"nickname":"mix","email":"mix@mail.ru","id":3357}
+{"nickname":"vito","email":"vito@mail.ru","id":3357}
+{"nickname":"sasha","email":"sasha@mail.ru","id":3357}
+{"nickname":"mike","email":"mike@mail.ru","id":3357}
+{"nickname":"xxx","email":"xxx@mail.ru","id":3357}
+{"nickname":"junior","email":"junior@mail.ru","id":3357}
+{"nickname":"wire","email":"wire@mail.ru","id":3357}
+{"nickname":"nobody","email":"nobody@mail.ru","id":3357}

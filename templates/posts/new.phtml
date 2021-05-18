@@ -1,0 +1,46 @@
+<h1>Форма создания поста</h1>
+    <!-- * удалить body2 если не требуется -->
+
+<form action="/posts" method="POST">
+  <div>
+    <label>
+        Имя
+      <input type="text" name="post[name]" value="<?=htmlspecialchars($post['name'])?>">
+    </label>
+    <?php if (isset($errors['name'])): ?>
+      <div><?=$errors['name']?></div>
+    <?php endif?>
+  </div>
+
+  <div>
+    <label>
+        body
+        <textarea name="post[body]"
+          rows="5" cols="33">
+          <?=htmlspecialchars($post['body'])?>
+        </textarea>
+    </label>
+    <?php if (isset($errors['body'])): ?>
+      <div><?=$errors['body']?></div>
+    <?php endif?>
+  </div>
+
+  <div>
+    <label>
+        body3 Содержимое *
+    </label>
+    <textarea type="text" rows="20" cols="80" name="post[body]"><?= htmlspecialchars($postData['body'] ?? '') ?></textarea>
+    <?php if (isset($errors['body'])): ?>
+      <div><?= $errors['body'] ?></div>
+    <?php endif ?>
+  </div>
+  <input type="submit" value="Create">
+</form>
+
+<!-- Как Хекслет -->
+<a href="/posts">Посты</a>
+
+<form action="/posts" method="post">
+  <?php require '_form.phtml' ?>
+  <input type="submit" value="Create">
+</form>

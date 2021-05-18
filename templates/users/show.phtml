@@ -1,0 +1,16 @@
+<h1>Hello, user ID <?= $user['id'] ?></h1>
+
+<?php foreach($user as $key => $value) : ?>
+        <p><?= $key ?> : <?= $value ?></p>
+<?php endforeach; ?>
+
+<br />
+
+<form action="/users/<?= $user['id'] ?>" method="post">
+  <input type="hidden" name="_METHOD" value="DELETE">
+  <input type="submit" value="Remove">
+</form>
+
+<form action="/users/exit">
+  <input type="submit" value="Exit">
+</form>
